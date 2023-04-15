@@ -12,7 +12,7 @@ const setNotlar = (req, res) => {
 
   // express ile hata yakalama
   if (!req.body.mesaj) {
-    res.status(500)
+    res.status(400)
     throw new Error('Lütfen mesaj alanını giriniz')
   }
 

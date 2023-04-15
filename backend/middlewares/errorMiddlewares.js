@@ -1,5 +1,5 @@
 const hataYakala = (err, req, res, next) => {
-  const statusKod = res.statusCode ? res.statusCode : 500
+  const statusKod = res.statusCode ? res.statusCode : 400
 
   res.status(statusKod)
 
