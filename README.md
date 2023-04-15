@@ -10,7 +10,6 @@ mernapp
 Collection name
 notlar
 
-
 - `npm init`
 - `yarn add express mongoose dotenv colors`
 - `yarn add -D nodemon`

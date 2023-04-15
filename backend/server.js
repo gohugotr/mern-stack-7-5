@@ -1,6 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const { hataYakala } = require('./middlewares/errorMiddlewares')
+const colors = require('colors')
+const baglan = require('./config/db')
 
 const PORT = process.env.PORT
 
@@ -29,4 +31,6 @@ app.use('/api/notlar', require('./routes/notRoute'))
 // Middleware ile  hata yakalama
 app.use(hataYakala)
 
-app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`))
+baglan()
+
+app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`.magenta.italic))
