@@ -5,9 +5,9 @@ const PORT = process.env.PORT
 
 const app = express()
 
-// const serverFonk = () => {
-//     console.log(`Server ${PORT} üzerinde yayında`)
-// }
+app.get('/get/notlar', (request, response)=>{
+    response.send('Notlar')
+})
 
 app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`) )
 
