@@ -6,7 +6,7 @@ const setNotlar = (req, res) => {
   // body verisini yakalama
   //console.log(req.body);
     if(!req.body.mesaj){
-        res.status(400).json({mesaj: `Mesaj bulunamadı`})
+        res.status(400).json({mesaj: `Lütfen mesaj alanını girin`})
     } 
   res.status(200).json({ mesaj: `Controller post notlar` })
 }
