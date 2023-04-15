@@ -15,19 +15,19 @@ const {
 // })
 
 // router.post('/', (req, res) => {
-//   res.status('200').json({ mesaj: 'post notlar' })
+//   res.status(200).json({ mesaj: 'post notlar' })
 // })
 
 // router.put('/:id', (req, res) => {
-//   res.status('200').json({ mesaj: `put ${req.params.id} nolu id` })
+//   res.status(200).json({ mesaj: `put ${req.params.id} nolu id` })
 // })
 
 // router.patch('/:id', (req, res) => {
-//   res.status('200').json({ mesaj: `Patch ${req.params.id} nolu kayıt düzenlendi`})
+//   res.status(200).json({ mesaj: `Patch ${req.params.id} nolu kayıt düzenlendi`})
 // })
 
 // router.delete('/:id', (req, res) => {
-//   res.status('200').json({ mesaj: `delete ${req.params.id} nolu kayıt silindi` })
+//   res.status(200).json({ mesaj: `delete ${req.params.id} nolu kayıt silindi` })
 // })
 
 // router.get('/', getNotlar)

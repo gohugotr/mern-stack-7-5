@@ -18,6 +18,8 @@ const app = express()
 
 //     response.status(200).json({ mesaj : notlar})
 // })
+app.use(express.urlencoded())
+app.use(express.json())
 
 app.use('/api/notlar', require('./routes/notRoute'))
 
