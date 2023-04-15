@@ -5,11 +5,11 @@ const PORT = process.env.PORT
 
 const app = express()
 
-app.get('/get/not',(req,res) =>{
+app.get('/api/not',(req,res) =>{
     res.send('Notlar')
 })
 
-app.get('/get/notlar', (request, response)=>{
+app.get('/api/notlar', (request, response)=>{
     response.json({Mesaj : 'JSON şeklinde Notlar'})
 })
 
