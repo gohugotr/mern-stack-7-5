@@ -10,7 +10,13 @@ app.get('/api/not',(req,res) =>{
 })
 
 app.get('/api/notlar', (request, response)=>{
-    response.json({Mesaj : 'JSON şeklinde Notlar'})
+    const notlar = {
+        Ad: 'Cengiz',
+        Not: 88,
+        Yaş: 53,
+    }
+
+    response.json({ mesaj : notlar})
 })
 
 app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`) )
