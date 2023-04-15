@@ -16,7 +16,7 @@ app.get('/api/notlar', (request, response)=>{
         Yaş: 53,
     }
 
-    response.json({ mesaj : notlar})
+    response.status(200).json({ mesaj : notlar})
 })
 
 app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`) )
