@@ -2,24 +2,36 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.status(200).json({ mesaj: 'get notlar' })
-})
+const {
+  getNotlar,
+  setNotlar,
+  updateNotlar,
+  patchNotlar,
+  deleteNotlar,
+} = require('../controllers/notControler')
 
-router.post('/',(req,res)=>{
-    res.status('200').json({mesaj: 'post notlar'})
-})
+// router.get('/', (req, res) => {
+//   res.status(200).json({ mesaj: 'get notlar' })
+// })
 
-router.put('/:id', (req, res) => {
-  res.status('200').json({ mesaj: `put ${req.params.id} nolu id` })
-})
+// router.post('/', (req, res) => {
+//   res.status('200').json({ mesaj: 'post notlar' })
+// })
 
-router.patch('/:id', (req,res) =>{
-  res.status('200').json({mesaj: `Patch ${req.params.id} nolu kayıtta düzenleme yapıldı`})
-})
+// router.put('/:id', (req, res) => {
+//   res.status('200').json({ mesaj: `put ${req.params.id} nolu id` })
+// })
+// router.patch('/:id', (req, res) => {
+//   res.status('200').json({ mesaj: `Patch ${req.params.id} nolu kayıtta düzenleme yapıldı` })
+// })
+// router.delete('/:id', (req, res) => {
+//   res.status('200').json({ mesaj: `delete ${req.params.id} nolu kayıt silindi` })
+// })
 
-router.delete('/:id',(req,res) => {
-  res.status('200').json({mesaj: `delete ${req.params.id} nolu kayıt silindi`})
-})
+router.get('/', getNotlar)
+router.post('/', setNotlar)
+router.put('/id', updateNotlar)
+router.patch('/:id', patchNotlar)
+router.delete('/:id', deleteNotlar)
 
 module.exports = router
