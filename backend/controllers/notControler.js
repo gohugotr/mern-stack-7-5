@@ -9,10 +9,9 @@ const setNotlar = (req, res) => {
   // if(!req.body.mesaj){
   //     res.status(400).json({mesaj: `Lütfen mesaj alanını girin`})
   // }
-  
+
   // express ile hata yakalama
   if (!req.body.mesaj) {
-    res.status(400)
     throw new Error('Lütfen mesaj alanını giriniz')
   }
 

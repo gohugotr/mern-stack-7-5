@@ -1,5 +1,6 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
+const { hataYakala } = require('./middlewares/errorMiddlewares')
 
 const PORT = process.env.PORT
 
@@ -20,10 +21,12 @@ const app = express()
 // })
 
 // Body verisini post ve update işlemlerinde kullanabiliriz.
-app.use(express.urlencoded({extended:true})) // varsayılan olarak {extended:true}
+app.use(express.urlencoded({ extended: true })) // varsayılan olarak {extended:true}
 app.use(express.json())
 
 app.use('/api/notlar', require('./routes/notRoute'))
 
-app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`) )
+// Middleware ile  hata yakalama
+app.use(hataYakala)
 
+app.listen(PORT, () => console.log(`Server ${PORT} üzerinde yayında`))
