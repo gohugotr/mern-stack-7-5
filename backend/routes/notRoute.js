@@ -30,7 +30,7 @@ const {
 
 // router.get('/', getNotlar)
 // router.post('/', setNotlar)
-// router.put('/id', updateNotlar)
+// router.put('/:id', updateNotlar)
 // router.patch('/:id', patchNotlar)
 // router.delete('/:id', deleteNotlar)
 
