@@ -4,9 +4,9 @@ const PORT = 8080
 
 const app = express()
 
-const serverFonk = () => {
-    console.log(`Server ${PORT} üzerinde çalışıyor`);
-}
+// const serverFonk = () => {
+//     console.log(`Server ${PORT} üzerinde çalışıyor`)
+// }
 
-app.listen(PORT, serverFonk)
+app.listen(PORT, () => console.log(`Server ${PORT} üzerinde çalışıyor`) )
 
