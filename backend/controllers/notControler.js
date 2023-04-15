@@ -1,8 +1,10 @@
-const getNotlar = (req, res) => {
-  res.status(200).json({ mesaj: `Controller get notlar` })
-}
+const asyncHandler = require('express-async-handler')
 
-const setNotlar = (req, res) => {
+const getNotlar = asyncHandler(async (req, res) => {
+  res.status(200).json({ mesaj: `Controller get notlar` })
+})
+
+const setNotlar = asyncHandler(async (req, res) => {
   // body verisini yakalama
   //console.log(req.body);
 
@@ -17,19 +19,19 @@ const setNotlar = (req, res) => {
   }
 
   res.status(200).json({ mesaj: `Controller post notlar` })
-}
+})
 
-const updateNotlar = (req, res) => {
+const updateNotlar = asyncHandler(async (req, res) => {
   res.status(200).json({ mesaj: `Controller ${req.params.id} nolu kayıt güncellendi` })
-}
+})
 
-const patchNotlar = (req, res) => {
+const patchNotlar = asyncHandler(async (req, res) => {
   res.status(200).json({ mesaj: `Controller ${req.params.id} nolu kayıt patch edildi` })
-}
+})
 
-const deleteNotlar = (req, res) => {
+const deleteNotlar = asyncHandler(async (req, res) => {
   res.status(200).json({ mesaj: `Controller ${req.params.id} nolu kayıt silindi` })
-}
+})
 
 module.exports = {
   getNotlar,
