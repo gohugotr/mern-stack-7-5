@@ -18,7 +18,9 @@ const app = express()
 
 //     response.status(200).json({ mesaj : notlar})
 // })
-app.use(express.urlencoded())
+
+// Body verisini post ve update işlemlerinde kullanabiliriz.
+app.use(express.urlencoded({extended:true})) // varsayılan olarak {extended:true}
 app.use(express.json())
 
 app.use('/api/notlar', require('./routes/notRoute'))
