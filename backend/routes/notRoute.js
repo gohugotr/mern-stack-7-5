@@ -28,10 +28,15 @@ const {
 //   res.status('200').json({ mesaj: `delete ${req.params.id} nolu kayıt silindi` })
 // })
 
-router.get('/', getNotlar)
-router.post('/', setNotlar)
-router.put('/id', updateNotlar)
-router.patch('/:id', patchNotlar)
-router.delete('/:id', deleteNotlar)
+// router.get('/', getNotlar)
+// router.post('/', setNotlar)
+// router.put('/id', updateNotlar)
+// router.patch('/:id', patchNotlar)
+// router.delete('/:id', deleteNotlar)
+
+// Routeları birleştirme, Zincirleme route oluşturma
+
+router.route('/').get(getNotlar).post(setNotlar)
+router.route('/:id').put(updateNotlar).patch(patchNotlar).delete(deleteNotlar)
 
 module.exports = router
