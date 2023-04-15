@@ -1,11 +1,11 @@
-const hataYakala = (error, req, res, next) => {
+const hataYakala = (err, req, res, next) => {
   const statusKod = res.statusCode ? res.statusCode : 500
 
   res.status(statusKod)
 
   res.json({
-    mesaj: error.message,
-    aciklama: process.env.NODE_ENV === 'production' ? null : error.stack,
+    mesaj: err.message,
+    aciklama: process.env.NODE_ENV === 'production' ? null : err.stack,
   })
 }
 
