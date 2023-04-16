@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler')
 
-const notSchema = require('../models/notModel')
+const notModel = require('../models/notModel')
 
 const getNotlar = asyncHandler(async (req, res) => {
   res.status(200).json({ mesaj: `Controller get notlar` })
