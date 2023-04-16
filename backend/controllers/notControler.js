@@ -63,9 +63,10 @@ const deleteNotlar = asyncHandler(async (req, res) => {
     res.status(400)
     throw new Error('Kayıt bulunamadı')
   }
-  const siliniyor = await notModel.findByIdAndDelete(req.params.id)
+  //const siliniyor = await notModel.findByIdAndDelete(req.params.id) veya aşşağıdaki gibi
+  await notModel.deleteOne(not)
 
-  res.status(200).json(siliniyor)
+  res.status(200).json(not._id)
 })
 
 module.exports = {
