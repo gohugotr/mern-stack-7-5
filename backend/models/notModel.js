@@ -11,7 +11,7 @@ const notSchema = mongoose.Schema(
       required: [true, 'Lütfen not açıklamasını giriniz'],
     },
     oncelik: {
-      type: number,
+      type: Number,
     },
   },
   {
