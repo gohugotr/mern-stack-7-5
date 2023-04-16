@@ -30,7 +30,7 @@ const setNotlar = asyncHandler(async (req, res) => {
   const not = await notModel.create({
     baslik: req.body.baslik,
     aciklama: req.body.aciklama,
-    oncelik: req.body.oncelik
+    oncelik: req.body.oncelik,
   })
 
   res.status(200).json(not)
