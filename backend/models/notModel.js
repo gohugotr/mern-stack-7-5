@@ -1,19 +1,22 @@
 const mongoose = require('mongoose')
 
-const notSchema = mongoose.Schema({
-    baslik:{
-        type: String,
-        required : [true, 'Lütfen not başlığını giriniz']
+const notSchema = mongoose.Schema(
+  {
+    baslik: {
+      type: String,
+      required: [true, 'Lütfen not başlığını giriniz'],
     },
     aciklama: {
-        type: String,
-        required:[true,'Lütfen not açıklamasını giriniz']
+      type: String,
+      required: [true, 'Lütfen not açıklamasını giriniz'],
     },
     oncelik: {
-        type: number
+      type: number,
     },
-}, {
-    timestamps:true
-})
+  },
+  {
+    timestamps: true,
+  }
+)
 
-module.exports = mongoose.model('Not',notSchema)
+module.exports = mongoose.model('Not', notSchema)
