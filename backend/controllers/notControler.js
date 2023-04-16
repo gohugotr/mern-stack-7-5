@@ -27,7 +27,7 @@ const setNotlar = asyncHandler(async (req, res) => {
     throw new Error('Lütfen balış ve açıklama giriniz')
   }
 
-  const not = await create({
+  const not = await notModel.create({
     baslik: req.body.baslik,
     aciklama: req.body.aciklama,
     oncelik: req.body.oncelik
