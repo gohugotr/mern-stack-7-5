@@ -3,7 +3,9 @@ const asyncHandler = require('express-async-handler')
 const notModel = require('../models/notModel')
 
 const getNotlar = asyncHandler(async (req, res) => {
-  res.status(200).json({ mesaj: `Controller get notlar` })
+  //res.status(200).json({ mesaj: `Controller get notlar` })
+  const notlar = await notModel.find()
+  res.status(200).json(notlar)
 })
 
 const setNotlar = asyncHandler(async (req, res) => {
@@ -24,7 +26,7 @@ const setNotlar = asyncHandler(async (req, res) => {
 
   if (!req.body.baslik || !req.body.aciklama) {
     res.status(400)
-    throw new Error('Lütfen balış ve açıklama giriniz')
+    throw new Error('Lütfen başlık ve açıklama giriniz')
   }
 
   const not = await notModel.create({
@@ -37,7 +39,7 @@ const setNotlar = asyncHandler(async (req, res) => {
 })
 
 const updateNotlar = asyncHandler(async (req, res) => {
-  res.status(200).json({ mesaj: `Controller ${req.params.id} nolu kayıt güncellendi` })
+  //res.status(200).json({ mesaj: `Controller ${req.params.id} nolu kayıt güncellendi` })
 })
 
 const patchNotlar = asyncHandler(async (req, res) => {
