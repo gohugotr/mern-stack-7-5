@@ -2,7 +2,7 @@ const mongoose  = require("mongoose");
 
 const kullaniciSchema = mongoose.Schema({
     kullaniciAd:{
-        type:String,
+        type: String,
         required:[true, 'Lütfen kullanici adı giriniz']
     },
     email:{
