@@ -2,6 +2,11 @@ const mongoose = require('mongoose')
 
 const notSchema = mongoose.Schema(
   {
+    kullanici: {
+      type:mongoose.Schema.Types.ObjectId,
+      required:true,
+      ref:'Kullanicis'
+    },
     baslik: {
       type: String,
       required: [true, 'Lütfen not başlığını giriniz'],

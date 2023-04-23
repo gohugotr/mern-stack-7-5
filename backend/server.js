@@ -28,6 +28,9 @@ app.use(express.json())
 
 app.use('/api/notlar', require('./routes/notRoute'))
 
+// Kullanıcı işlemleri
+app.use('/api/kullanicilar', require('./routes/kullaniciRoute'))
+
 // Middleware ile  hata yakalama
 app.use(hataYakala)
 
